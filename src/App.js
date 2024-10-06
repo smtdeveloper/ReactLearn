@@ -5,8 +5,19 @@ function App() {
   return (
     <div className="App">      
 
-      <img src="/logo192.png"/> 
-      <img src={logo}/>
+     
+      
+      <h4> Ortam : {process.env.NODE_ENV} </h4>
+      {process.env.REACT_APP_API_URL}
+
+      {process.env.NODE_ENV === 'production' && (
+        
+        <>
+        <img src="/logo192.png"/> 
+        <img src={logo}/>
+        </>
+
+      )}
 
     </div>
   );
